@@ -2,3 +2,6 @@ google*.html
 index.html.wizard
 601/
 favicon.*
+.DS_Store
+index.old.html
+text.md

@@ -2,8 +2,15 @@
 
 $(document).ready(function() {
 
+  $('#text').masonry({
+    itemSelector : '.entry',
+    columnWidth : 50 
+  });
+
   var w = $(window).width();
-  var h = $(window).height();
+  //var h = $(document).height();
+  //var h = $('#text').height();
+  var h = 900;
 
   var art = [
     lines
@@ -14,8 +21,13 @@ $(document).ready(function() {
     , circles
   ];
   //art[rand(art.length)-1](w,h);
-  circles(w,h);
- 
+  var bgcolor = circles(w,h);
+ console.log(bgcolor); 
+  $('body').css('background-color', bgcolor);
+
+  // class="canvas-container" is created by fabric and has
+  // a default postion of relative
+  $('.canvas-container').css('position', 'fixed'); 
 });
 
 function squares(w,h) {
@@ -23,7 +35,8 @@ function squares(w,h) {
   var canvas = new fabric.Canvas('c');
   canvas.setHeight(h - 20);
   canvas.setWidth(w - 20);
-  canvas.backgroundColor = rand_hex_color();
+  var bgcolor = rand_hex_color();
+  canvas.backgroundColor = bgcolor;
 
   var num = rand( (h + w) /  10)
   var x = rand(w);
@@ -45,6 +58,7 @@ function squares(w,h) {
       y = y1;
     }
   }
+  return bgcolor;
 }
 
 function squaresIpodVersion(w,h) {
@@ -94,15 +108,16 @@ function squaresTetrisVersion(w,h) {
 
 function circles(w,h) {
   var canvas = new fabric.Canvas('c');
-  canvas.setHeight(h - 20);
+  canvas.setHeight(h - 5);
   canvas.setWidth(w - 20);
-  canvas.backgroundColor = rand_hex_color();
+  var bgcolor = rand_hex_color();
+  canvas.backgroundColor = bgcolor;
   var num = 10;
-  var x = rand(w);
-  var y = rand(h);
+  //var x = rand(w / 2);
+  //var y = rand(h / 2);
   for (var i=1; i < num; i++) {
-    var x1 = rand(w);
-    var y1 = rand(h);
+    var x1 = rand(w / 2);
+    var y1 = rand(h / 2);
 
     var color = new fabric.Color.fromHex(rand_hex_color());
     color.setAlpha(Math.random());
@@ -111,8 +126,10 @@ function circles(w,h) {
     var circ = new fabric.Circle({
       //left: x,
       //top: y,
-      left: x1 % 2 ? x1 : x,
-      top:  y, //y1 % 1 ? y1 : y,
+      //left: x1 % 2 ? x1 : x,
+      //top:  y1 % 2 ? y1 : y,
+      left: x1,
+      top:  y1,
       fill: rgba,
       radius: rand(( h + w ) / 4)
     });
@@ -135,8 +152,8 @@ function circles(w,h) {
       duration: 100000,
       easing: fabric.util.ease.easeOutElastic,
     });
-
   }
+  return bgcolor;
 }
 
 function letters(w,h) {

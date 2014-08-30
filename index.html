@@ -1,18 +1,132 @@
 <!DOCTYPE html>
   <head>
   <!--[if IE]><script src="js/excanvas.compiled.js"></script><![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <style>
+      body {
+        font-family: 'Lato', sans-serif;
+      }
       #c {
-        position: absolute;
-        z-index: 2;
+        position: fixed;
+        /* z-index: 20; */
+      }
+      #text {
+        /* position: absolute; */
+        z-index: 5;
+        height:800px;
+      }
+      /*
+      h1, h2, p {
+        background-color: rgba(255, 255, 255, .5);
+        display: inline;
+        float: left;
+        clear: both;
+        margin: 5px;
+      }
+      */
+      ul {
+        list-style-type: none;
+      }
+      img {
+        border:0;
+        opacity: 0.7;
+        filter: alpha(opacity=70); /* For IE8 and earlier */
+      }
+      .entry {
+        background-color: rgba(255, 255, 255, .5);
+        margin: 10px;
+        padding: 5px;
+      }
+      h2 {
+        background-color: rgba(255, 255, 255, .7);
+        position: relative;
+        text-align: center;
+        display: inline;
+        /* z-index: 10; */
+      }
+      blockquote, p {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id="canvas"></div>
     <canvas id="c"></canvas>
+    <h2>Projects and Presentations</h2>
+    <div id="text">
+      <div class="entry">
+        <p>2014 Summer</p>
+        <p>Michigan Publishing</p>
+        <p><a href="https://seelio.com/w/k5w/michigan-publishing">Data Visualization</a></p>
+        <blockquote>
+          <a href="http://publishing.umich.edu"><img src="assets/michpub.png" alt="michigan publishing" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2014 Spring</p>
+        <p>SI601 Data Manipulation</p>
+        <p><a href="https://github.com/sethaj/bigpicture-py">bigpicture.py</a></p>
+        <blockquote>
+          <a href="assets/willem_de_kooning--011.jpg"><img src="assets/willem_de_kooning--011.thumb.png" alt="willem de kooning" /></a>
+          <a href="assets/rocketry--005.jpg"><img src="assets/rocketry--005.thumb.png" alt="rocketry" /></a>
+          <br/>
+          <a href="assets/prima_ballerina--002.jpg"><img src="/assets/prima_ballerina--002.thumb.png" alt="prima ballerina" /></a>
+          <a href="assets/homer--005.jpg"><img src="assets/homer--005.thumb.png" alt="homer" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2014 Spring</p>
+        <p>mPach</p>
+        <p>Integrated Publishing and Archiving of Journals in HathiTrust</p>
+        <blockquote>
+          <p>Paper for <a href="http://www.ncbi.nlm.nih.gov/books/NBK159727/">Jats-Con 2013/14</a></p>
+          <p>Presentation from <a href="http://jats.nlm.nih.gov/jats-con/2013/presentations/hawkins2013.pdf">Jats-Con 2013/14</a></p>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Fall</p>
+        <p>SI543 Programming</p>
+        <p><a href="https://github.com/sethaj/asteroids">jruby vs. java</a></p>
+        <blockquote>
+          <img src="assets/asteroids.png" alt="asteroids" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Fall</p>
+        <p>The Civil Rights Litigation Clearinghouse</p>
+        <p><a href="assets/Clearinghouse-Access_and_Preservation-Digital_Preservation_and_Curation_meet-up_Nov_11_2013.pdf">Access and Preservation</a></p>
+        <blockquote>
+          <a href="http://clearinghouse.net"><img src="assets/ch-logo.png" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2012/13</p>
+        <p>Espresso Book Machine/Mirlyn/Hathitrust Integration</p>
+        <blockquote>
+          <a href="assets/EBM_orders_from_Mirlyn.png"><img src="assets/EBM_orders_from_Mirlyn.thumb.png" alt="ebm, mirlyn, hathitrust"/></a>
+          <br />
+          <iframe width="213" height="120" src="//www.youtube.com/embed/mHfuQK7kh0k?rel=0&modestbranding=1&autoplay=0&controls=0" frameborder="0" allowfullscreen></iframe>
+          <iframe width="213" height="120" src="//www.youtube.com/embed/46T3X7dkKSQ?rel=0&modestbranding=1&autoplay=0&controls=0" frameborder="0" allowfullscreen></iframe>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Spring/Summer</p>
+        <p>Node.js and Mongo DB</p>
+        <p><a href="https://github.com/sethaj/badland.org">badland</a>, <a href="https://github.com/sethaj/tharn.org">tharn</a><p>
+        <blockquote>
+          <a href="http://badland.org"><img src="assets/badland.thumb.png" alt="badland" /></a>
+          <br/>
+          <a href="http://tharn.org"><img src="assets/tharn.thumb.png" alt="tharn" /></a>
+        </blockquote>
+    </div>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/fabric.min.all.1.4.11.js"></script>
-    <script src="js/old-serth.org.js"></script>
+    <script src="js/masonry.min.3.1.5.js"></script>
+    <script src="js/saj.js"></script>
   </body>
 </html>
