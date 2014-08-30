@@ -2,11 +2,18 @@
 
 $(document).ready(function() {
 
+  var $container = $('#text');
+    $container.imagesLoaded( function() {
+    $container.masonry({
+      columnWidth: 50,
+    });
+  });
+/*
   $('#text').masonry({
     itemSelector : '.entry',
     columnWidth : 50 
   });
-
+*/
   var w = $(window).width();
   //var h = $(document).height();
   //var h = $('#text').height();
