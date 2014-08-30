@@ -2,11 +2,11 @@
 
 $(document).ready(function() {
 
-  var $container = $('#text');
-    $container.imagesLoaded( function() {
-    $container.masonry({
-      columnWidth: 50,
-    });
+  var $container = $('#text').masonry({
+    columnWidth: 50,
+  });
+  $container.imagesLoaded( function() {
+    $container.masonry();
   });
 /*
   $('#text').masonry({
