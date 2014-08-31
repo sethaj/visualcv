@@ -8,15 +8,9 @@ $(document).ready(function() {
   $container.imagesLoaded( function() {
     $container.masonry();
   });
-/*
-  $('#text').masonry({
-    itemSelector : '.entry',
-    columnWidth : 50 
-  });
-*/
+
   var w = $(window).width();
   //var h = $(document).height();
-  //var h = $('#text').height();
   var h = 900;
 
   var art = [
