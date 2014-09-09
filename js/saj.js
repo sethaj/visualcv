@@ -145,12 +145,12 @@ function circles(w,h) {
 
     circ.animate(dir[rand(dir.length)-1], amt[rand(amt.length)-1], { 
       onChange: canvas.renderAll.bind(canvas),
-      duration: 100000,
+      duration: 1000000, 
       easing: fabric.util.ease.easeOutBounce
     });
     circ.animate(dir[rand(dir.length)-1], amt[rand(amt.length)-1], {
       onChange: canvas.renderAll.bind(canvas),
-      duration: 100000,
+      duration: 1000000,
       easing: fabric.util.ease.easeOutElastic,
     });
   }
