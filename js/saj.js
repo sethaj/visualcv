@@ -109,8 +109,8 @@ function squaresTetrisVersion(w,h) {
 
 function circles(w,h) {
   var canvas = new fabric.Canvas('c');
-  canvas.setHeight(h - 5);
-  canvas.setWidth(w - 20);
+  canvas.setHeight(h); // - 5);
+  canvas.setWidth(w); // - 20);
   var bgcolor = rand_hex_color();
   canvas.backgroundColor = bgcolor;
   var num = 10;
