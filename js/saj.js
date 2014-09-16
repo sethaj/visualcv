@@ -37,7 +37,7 @@ $(document).ready(function() {
 });
 
 function squares(w,h) {
-  // √ http://serth.org/cgi-bin/maps/gdii.cgi
+  // http://serth.org/cgi-bin/maps/gdii.cgi
   var canvas = new fabric.Canvas('c');
   canvas.setHeight(h - 20);
   canvas.setWidth(w - 20);
@@ -118,9 +118,7 @@ function circles(w,h) {
   canvas.setWidth(w); // - 20);
   var bgcolor = rand_hex_color();
   canvas.backgroundColor = bgcolor;
-  var num = 10;
-  //var x = rand(w / 2);
-  //var y = rand(h / 2);
+  var num = rand(8, 4);
   for (var i=1; i < num; i++) {
     var x1 = rand(w / 2);
     var y1 = rand(h / 2);
@@ -130,10 +128,6 @@ function circles(w,h) {
     var rgba = color.toRgba();
 
     var circ = new fabric.Circle({
-      //left: x,
-      //top: y,
-      //left: x1 % 2 ? x1 : x,
-      //top:  y1 % 2 ? y1 : y,
       left: x1,
       top:  y1,
       fill: rgba,
@@ -142,9 +136,7 @@ function circles(w,h) {
     canvas.add(circ);
 
     // Some animation
-    // Makes things very slow and crashes some browsers!
-    // Need to fix. Sorry! :(
-
+    // not very browser/mobile friendly :(
     var dir = ['left', 'top'];
     var amt = ['-=' + rand(h), '+=' + rand(h)];
 
@@ -163,7 +155,7 @@ function circles(w,h) {
 }
 
 function letters(w,h) {
-  // √ http://serth.org/cgi-bin/maps/patterns.cgi
+  // http://serth.org/cgi-bin/maps/patterns.cgi
   for (var i=0; i < 800; i++) {
     $('#canvas').css({ 
       'position': 'absolute', 
@@ -182,7 +174,7 @@ function letters(w,h) {
 } 
 
 function lines(w, h) {
-  // √ http://serth.org/cgi-bin/maps/maps.cgi
+  // http://serth.org/cgi-bin/maps/maps.cgi
   var canvas = new fabric.Canvas('c');
   canvas.setHeight(h - 20);
   canvas.setWidth(w - 20);
@@ -203,9 +195,11 @@ function lines(w, h) {
   }
 }
 
-function rand (n) {
-  return (Math.floor (Math.random()*n+1));
+function rand (to, from) {
+  from = from || 1;
+  return (Math.floor (Math.random()*(to-from))+from);
 }
+
 
 function rand_hex_color() {
   // http://paulirish.com/2009/random-hex-color-code-snippets/
