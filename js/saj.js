@@ -7,6 +7,9 @@ $(document).ready(function() {
   });
   $container.imagesLoaded( function() {
     $container.masonry();
+    $('.entry').each(function() {
+      $(this).fadeTo('1000', 1);
+    });
   });
 
   var w = $(window).width();
