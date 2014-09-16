@@ -7,9 +7,11 @@ $(document).ready(function() {
   });
   $container.imagesLoaded( function() {
     $container.masonry();
-    $('.entry').each(function() {
-      $(this).fadeTo('1000', 1);
-    });
+    setTimeout(function() {
+      $('.entry').each(function() {
+        $(this).fadeTo('slow', 1);
+      })
+    }, 3000);
   });
 
   var w = $(window).width();
