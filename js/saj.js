@@ -15,8 +15,7 @@ $(document).ready(function() {
   });
 
   var w = $(window).width();
-  //var h = $(document).height();
-  var h = 900;
+  var h = $(document).height();
 
   var art = [
     lines
