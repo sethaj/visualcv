@@ -5,3 +5,4 @@ favicon.*
 .DS_Store
 index.old.html
 text.md
+*.pdf
