@@ -11,7 +11,7 @@ $(document).ready(function() {
       $('.entry').each(function() {
         $(this).fadeTo('slow', 1);
       })
-    }, 2000);
+    }, 1500);
   });
 
   var w = $(window).width();
