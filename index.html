@@ -1,18 +1,212 @@
 <!DOCTYPE html>
   <head>
   <!--[if IE]><script src="js/excanvas.compiled.js"></script><![endif]-->
-    <style>
-      #c {
-        position: absolute;
-        z-index: 2;
-      }
-    </style>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="css/saj.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/fabric.min.all.1.4.11.js"></script>
+    <script src="js/imagesloaded.pkgd.min.3.1.8.js"></script>
+    <script src="js/masonry.min.3.1.5.js"></script>
+    <title>Seth A. Johnson</title>
   </head>
   <body>
-    <div id="canvas"></div>
     <canvas id="c"></canvas>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="js/fabric.all.min.1.2.9.js"></script>
-    <script src="js/old-serth.org.js"></script>
+    <div id="text">
+      <div class="entry">
+        <h2>Projects and Presentations</h2>
+        <blockquote>
+          A collection of projects, presentations or workshops that are from work,<br />
+          school or just side projects I do for fun.
+        </blockquote>
+      </div>
+
+      <div class="entry">
+          <p>2016-18</p>
+          <p><a href="https://seelio.com/w/2g4t/university-of-michigan-library-lit-building-a-digital-publishing-platform">Fulcurm/Heliotrope</a></p>
+          <p>Ruby on Rails, Samvera, Fedora, Blacklight</p>
+          <blockquote>
+              <a href="https://fulcrum.org"><img src="assets/fulcrum-logo.png" alt="Fulrum logo" /></a>
+          </blockquote>
+      </div>
+
+      <div class="entry">
+          <p>2018 Spring</p>
+          <p><a href="https://umsi-data-science.github.io/big-data-workshop/">Predictive Analytics and Deep Learning Workshop</a></p>
+          <p>DataBricks, Python, Apache Spark, K-Means Clustering, Neural Networks</p>
+          <blockquote>
+              <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1101947090054953/2232878890938999/6387199866535941/latest.html"><img src="assets/Bob_at_Easel.png" alt="Bob Ross Happily Painting"></a>
+          </blockquote>
+       </div>
+
+      <div class="entry">
+          <p>2016 Winter</p>
+          <p>SI622 Usability Assessment</p>
+          <blockquote>
+            <iframe width="213" height="120" src="//www.youtube.com/embed/UlgkHyr6Qgs?rel=0&modestbranding=1&autoplay=0&controls=1" frameborder="0" allowfullscreen>
+            </iframe>
+          </blockquote>
+      </div>
+
+      <div class="entry">
+          <p>2015 Fall</p>
+          <p>MKT 618 Marketing Research and Analytics</p>
+          <p><a href="assets/Xiaomi_MK618.pdf">Survey Design with Factor, Cluster and Conjoint Data Analysis</a>
+          <blockquote>
+              <img src="assets/Xiaomi_MK618.thumb.png" alt="xiaomi group presentation" />
+          </blockquote>
+      </div>  
+
+      <div class="entry">
+	    <p>2015 Fall</p>
+	    <p>Perl/Mojolicious and Angular.js</p>
+	    <p><a href="https://github.com/sethaj/badland-mojo-angular">badland</a>, <a href="https://github.com/sethaj/tharn-mojo-angular">tharn</a></p>
+            <blockquote>
+                <a href="http://badland.org"><img src="assets/badland.thumb.png" alt="badland" /></a>
+                <br/>
+                <a href="http://tharn.org"><img src="assets/tharn.thumb.png" alt="tharn" /></a>
+            </blockquote>
+        </div>
+
+      <div class="entry">
+        <p>2014 Fall</p>
+        <p>SI618 Exploratory Data Analysis</p>
+        <p><a href="https://github.com/sethaj/twit-trend-pics">twit-trend-pics</a></p>
+        <blockquote>
+          <a href="assets/toptrends.png"><img src="assets/toptrends.thumb.png" alt="top trends" /></a>
+          <a href="assets/mtvstars.jpg"><img src="assets/mtvstars.thumb.png" alt="#MTVStars" /></a>
+          <br />
+          <a href="assets/k-medoid.png"><img src="assets/k-medoid.thumb.png" alt="k-medoids" /></a>
+          <a href="assets/yumurtadelisi.jpg"><img src="assets/yumurtadelisi.thumb.png" alt="yumurtadelisi" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2014 Summer</p>
+        <p>Michigan Publishing</p>
+        <p><a href="https://seelio.com/w/k5w/michigan-publishing">Data Visualization</a></p>
+        <blockquote>
+          <a href="http://publishing.umich.edu"><img src="assets/michpub.png" alt="michigan publishing" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2014 Spring</p>
+        <p>SI601 Data Manipulation</p>
+        <p><a href="https://github.com/sethaj/bigpicture-py">bigpicture.py</a></p>
+        <blockquote>
+          <a href="assets/willem_de_kooning--011.jpg"><img src="assets/willem_de_kooning--011.thumb.png" alt="willem de kooning" /></a>
+          <a href="assets/rocketry--005.jpg"><img src="assets/rocketry--005.thumb.png" alt="rocketry" /></a>
+          <br/>
+          <a href="assets/prima_ballerina--002.jpg"><img src="/assets/prima_ballerina--002.thumb.png" alt="prima ballerina" /></a>
+          <a href="assets/homer--005.jpg"><img src="assets/homer--005.thumb.png" alt="homer" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2014 Spring</p>
+        <p><a href="http://www.lib.umich.edu/mpach">mPach</a></p>
+        <p>Integrated Publishing and Archiving of Journals in HathiTrust</p>
+        <blockquote>
+          <p><a href="http://www.lib.umich.edu/sites/default/files/departments/mPach%20Overview%20Diagram%20v5.png"><img src="assets/mPach_Overview_Diagram_v5.thumb.png" alt="mpach diagram" /></a></p>
+          <p>Paper for <a href="http://www.ncbi.nlm.nih.gov/books/NBK159727/">Jats-Con 2013/14</a></p>
+          <p>Presentation from <a href="http://jats.nlm.nih.gov/jats-con/2013/presentations/hawkins2013.pdf">Jats-Con 2013/14</a></p>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Fall</p>
+        <p>SI543 Programming</p>
+        <p><a href="https://github.com/sethaj/asteroids">jruby vs. java</a></p>
+        <blockquote>
+          <img src="assets/asteroids.png" alt="asteroids" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Fall</p>
+        <p>The Civil Rights Litigation Clearinghouse</p>
+        <p><a href="assets/Clearinghouse-Access_and_Preservation-Digital_Preservation_and_Curation_meet-up_Nov_11_2013.pdf">Access and Preservation</a></p>
+        <blockquote>
+          <a href="http://clearinghouse.net"><img src="assets/ch-logo.png" alt="clearinghouse logo" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2012/13</p>
+        <p>Espresso Book Machine/Mirlyn/Hathitrust Integration</p>
+        <blockquote>
+          <a href="assets/EBM_orders_from_Mirlyn.png"><img src="assets/EBM_orders_from_Mirlyn.thumb.png" alt="ebm, mirlyn, hathitrust"/></a>
+          <br />
+          <iframe width="213" height="120" src="//www.youtube.com/embed/mHfuQK7kh0k?rel=0&modestbranding=1&autoplay=0&controls=0" frameborder="0" allowfullscreen></iframe>
+          <iframe width="213" height="120" src="//www.youtube.com/embed/46T3X7dkKSQ?rel=0&modestbranding=1&autoplay=0&controls=0" frameborder="0" allowfullscreen></iframe>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Spring/Summer</p>
+        <p>Node.js and Mongo DB</p>
+        <p><a href="https://github.com/sethaj/badland.org">badland</a>, <a href="https://github.com/sethaj/tharn.org">tharn</a></p>
+        <blockquote>
+          <a href="http://badland.org"><img src="assets/badland.thumb.png" alt="badland" /></a>
+          <br/>
+          <a href="http://tharn.org"><img src="assets/tharn.thumb.png" alt="tharn" /></a>
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2013 Winter</p>
+        <p>SI 582 Interaction Design</p>
+        <p><a href="assets/Comfort_Zone_SI582.pdf">Enabling Student Academic Exploration</a></p>
+        <blockquote>
+          <img src="assets/comfort-zone-SI582.thumb.png" alt="comfort zone" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2012 Fall</p>
+        <p>SI 544 Introduction to Statistics and Data Analysis</p>
+        <p><a href="assets/Comfort_Zone_SI544.pdf">Comfort Zone group project</a></p>
+        <blockquote>
+          <img src="assets/comfort-zone-SI544.thumb.png" alt="comfort zone" />
+        </blockquote>
+      </div>
+      
+      <div class="entry">
+        <p>Winter 2012</p>
+        <p>SI 658 Information Architecture</p>
+        <p><a href="assets/Pinterest_presentation.pdf">Pinterest Evaluation group project</a></p>
+        <blockquote>
+          <img src="assets/pinterest.thumb.png" alt="pinterest pin" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2011/2012</p>
+        <p><a href="http://www.press.umich.edu">U of M Press Website</a></p>
+        <p>Perl/Mojolicious, MySQL, MS SQL, Solr</p>
+        <blockquote>
+          <img src="assets/imprint-umpress-a.thumb.jpg" alt="University of Michigan Press" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2011 Spring</p>
+        <p>Ann Arbor Perl Mongers</p>
+        <p><a href="assets/perl-dancer-paas.pdf">Perl Dancer and Dotcloud</a></p>
+        <blockquote>
+          <img src="assets/dancer-dotcloud.thumb.png" alt="dancer and dotcloud" />
+        </blockquote>
+      </div>
+
+      <div class="entry">
+        <p>2005</p>
+        <p>Cedar Crest College Solo Exhibit</p>
+        <p><a href="assets/Jan252005.shtm-1.pdf">Computer Generated Images</a></p>
+        <blockquote>
+          <a href="http://serth.org/pngs/2003825-9HgIrAlv.png"><img src="assets/the-story-of-the-deluge.thumb.png" alt="the story of the deluge" /></a>
+        </blockquote>
+      </div>
+    </div>
+    <script src="js/saj.js"></script>
   </body>
 </html>
